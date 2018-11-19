@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-   return render_template('index.html')
+    return render_template('index.html')
 
 
 @app.route('/databases',methods=['GET','POST'])
@@ -24,8 +24,24 @@ def add_dbs():
 
     ##flash(error)
     return render_template('databases.html')
+
+@app.route('/insert_data',methods=['GET','POST'])
+def insert_data():
+    if request.method == 'GET':
+        return render_template('insertdata.html')
+    else:
+        pass
 @app.route('/databases/<int:id>',methods=['PUT','DELETE'])
 def databases(id):
     pass
+
+@app.route('/query',methods=['GET','POST'])
+def query():
+    if request.method == 'GET':
+       return render_template('consulta.html')
+    else:
+        pass
+    
+
 if __name__ == '__main__':
     app.run(debug=True)
