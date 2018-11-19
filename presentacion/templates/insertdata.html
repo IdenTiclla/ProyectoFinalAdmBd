@@ -3,16 +3,24 @@
 {% block content %}
     <div class="container">
         <div class="row pt-5">
+
             <div class="col-md-5">
                 <div class="card">
                     <form action="" class="card-body" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" placeholder="Nombre">
+                            <label for="sel1">Base de Datos:</label>
+                            <select class="form-control" id="sel1">
+                                <option>Medicos</option>
+                                <option>DEntista</option>
+                                <option>COnstruccion</option>
+                                <option>VEhiculos</option>
+                            </select>
                         </div>  
-                        <input type="submit" class="btn btn-primary btn-block" value="Crear">
+                        <input type="submit" class="btn btn-primary btn-block" value="Use">
                     </form>
                 </div>
             </div>
+
             <div class="col-md-7">
                 <table class="table table-small">
                     <tr>
@@ -20,6 +28,7 @@
                     </tr>
                 </table>
             </div>
+
         </div>
     </div>
 {% endblock %}
